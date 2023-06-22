@@ -1,0 +1,25 @@
+.checked {
+  color: orange;
+}
+
+.check{
+ color: #9932CC;
+}
+
+.fa {
+  font-size: 20px; /* adjust the font size to change star size */
+}
+textarea[type="text"] {
+ width:100%;
+ height: 60px;
+  box-sizing: border-box;
+  border: 2px solid black; /* add a border to the element */
+  padding: 8px; /* add some padding to the element */
+  vertical-align: top; /* align the text input to the top */
+ font-family: "Times New Roman", serif;
+ font-size: 20px;
+}
+
+.fa-solid{
+  font-size: 30px; 
+}

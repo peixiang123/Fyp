@@ -1,0 +1,48 @@
+table{
+  border:2px solid black;
+  padding: 30px;
+  margin-left: 200px;
+  background-color: white;
+}
+
+th,td{
+  border:2px solid black;
+  padding: 30px;
+}
+
+a.feedback{
+  font-family: cursive; 
+  color:purple; 
+  font-weight: bold; 
+  text-decoration: underline;
+  background: none;
+} 
+
+table.order{
+  border-collapse: collapse; 
+  margin-left:200px; 
+  margin-right:2px;
+}
+
+table.cart{
+   border-collapse: collapse; 
+  margin-left:200px; 
+  margin-right:2px;
+  font-size:15px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-sidebar {
+  flex-basis: 60%;
+}
+
+.right-sidebar {
+  flex-basis: 40%;
+}
+
+
+
