@@ -69,5 +69,19 @@
   </div>
 </li>
 <li><a href="workerReg.php">worker register</a></li>
+<li><a href="logout.php" onclick="logout()">Log out</a></li>
       </ul>
     </nav>
+    <script>
+function logout() {
+  // Display a confirmation dialog
+  var result = confirm("Are you sure you want to log out?");
+  
+  // If the user confirms, redirect to the logout page
+  if (result) {
+    window.location.href = "logout.php";
+  }
+}
+</script>
+  </body>
+  </html>

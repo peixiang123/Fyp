@@ -9,31 +9,42 @@
 	<?php
 	include('customerheader.php');
 
-if (isset($_POST['add_to_cart'])){
-    if (isset($_SESSION['cart'])){
+if (isset($_POST['add_to_cart'])) {
+    $foodId = $_POST['food_id'];
+    $quantity = $_POST['quantity'];
 
-      $session_array_id=array_column($_SESSION['cart'], "food_id");
+    if (isset($_SESSION['cart'])) {
+        // Check if the food item already exists in the cart
+        $itemIndex = false;
+        foreach ($_SESSION['cart'] as $index => $item) {
+            if ($item['food_id'] == $foodId) {
+                $itemIndex = $index;
+                break;
+            }
+        }
 
-      if(!in_array($_POST['food_id'], $session_array_id)){
-
-        $session_array = array(
-            "food_id" => $_POST['food_id'],
+        if ($itemIndex !== false) {
+            // Update the quantity of the existing item
+            $_SESSION['cart'][$itemIndex]['quantity'] += $quantity;
+        } else {
+            // Add a new item to the cart
+            $newItem = array(
+                "food_id" => $foodId,
+                "name" => $_POST['name'],
+                "price" => $_POST['price'],
+                "quantity" => $quantity,
+            );
+            $_SESSION['cart'][] = $newItem;
+        }
+    } else {
+        // Add the first item to the cart
+        $newItem = array(
+            "food_id" => $foodId,
             "name" => $_POST['name'],
             "price" => $_POST['price'],
-            "quantity" => $_POST['quantity'],
+            "quantity" => $quantity,
         );
-        $_SESSION['cart'][]= $session_array;
-      }
-  }
-else {
-        // Add a new item to the cart
-        $session_array = array(
-            "food_id" => $_POST['food_id'],
-            "name" => $_POST['name'],
-            "price" => $_POST['price'],
-            "quantity" => $_POST['quantity'],
-        );
-        $_SESSION['cart'][] = $session_array;
+        $_SESSION['cart'][] = $newItem;
     }
 }
 ?>

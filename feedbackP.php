@@ -3,7 +3,6 @@
 
 session_start();
 include('runSQL.php');
-print_r($_POST);
 $customer_id = $_SESSION['customer_id'];
 $order_id = $_POST['order_id'];
 $scores = $_POST['score'];
@@ -31,4 +30,5 @@ if ($delivery_id !== null && $deliveryRate !== null) {
   $sql2 = "UPDATE delivery SET deliveryRate = '$deliveryRate' WHERE delivery_id = '$delivery_id'";
   $result2 = mysqli_query($conn, $sql2);
 }
+
 ?>

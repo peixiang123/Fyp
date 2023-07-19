@@ -52,7 +52,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
   ?>
   <td>
-    <input type="number" name="quantity" id="quantity" value="0" min="0" class="form-control">
+    <input type="number" name="quantity" id="quantity" value="1" min="1" class="form-control">
     <input type="submit" name="add_to_cart" value="Add to Cart">
 
 

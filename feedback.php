@@ -129,8 +129,6 @@ while ($row = mysqli_fetch_assoc($result1)) {
   }
 }
 ?>
-<button type="submit" style="margin-left: 800px;">submit</button>
-</form>
 
 <script>
   let rateSelected = false;
@@ -165,5 +163,8 @@ function checkRate() {
   //checkrating 
   
 </script>
+
+<button type="submit" style="margin-left: 800px;">submit</button>
+</form>
 </body>
 </html>

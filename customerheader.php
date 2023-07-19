@@ -39,6 +39,7 @@ if (isset($_SESSION['customer_id'])){
         <li><a href="myorder.php">My order</a></li>
         <li><a href="orderhistory.php">Order History</a></li>
         <li><a href="mycart.php">My cart</a></li>
+        <li><a href="logout.php" onclick="logout()">Log out</a></li>
 
     <div class="sidenav">
       
@@ -73,5 +74,16 @@ if (isset($_SESSION['customer_id'])){
 </ul>
 </nav>
 </div>
+<script>
+function logout() {
+  // Display a confirmation dialog
+  var result = confirm("Are you sure you want to log out?");
+  
+  // If the user confirms, redirect to the logout page
+  if (result) {
+    window.location.href = "logout.php";
+  }
+}
+</script>
 </body>
 </html>

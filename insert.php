@@ -18,7 +18,7 @@ include "runSQL.php";
 		}				
 		else
 		{
-			$sql1 = "INSERT INTO category (categoryName, desctiption) VALUES ('$categoryName', '$desctiption');";
+			$sql1 = "CALL insert_category('$categoryName', '$desctiption');";
 			$res = mysqli_query($conn,$sql1);  
 			echo "<script>alert('category successful insert.');</script>";
 			echo"<meta http-equiv='refresh' content='0; url=insertcategory.php'/>";

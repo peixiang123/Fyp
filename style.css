@@ -20,7 +20,7 @@ label.logo{
   color: white;
   font-size: 35px;
   line-height: 80px;
-  padding: 0 100px;
+  padding: 0 50px;
   font-weight: bold;
 }
 nav ul{
@@ -44,7 +44,7 @@ a.active,a:hover{
   transition: .5s;
 }
 .checkbtn{
-  font-size: 30px;
+  font-size: 20px;
   color: white;
   float: left;
   line-height: 80px;
@@ -61,7 +61,7 @@ a.active,a:hover{
     padding-left: 50px;
   }
   nav ul li a{
-    font-size: 16px;
+    font-size: 12px;
   }
 
 /*check window size*/
@@ -92,7 +92,7 @@ a.active,a:hover{
 
   }
   nav ul li a{
-    font-size: 20px;
+    font-size: 12px;
   }
   a:hover,a.active{
     background: none;

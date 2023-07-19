@@ -29,7 +29,8 @@
                     JOIN order_detail od ON o.order_id = od.order_id 
                     JOIN food f ON f.food_id = od.food_id 
                     WHERE o.customer_id = $customer_id 
-                    AND (o.orderStatus = 'paid' OR o.delStatus = 'Done')
+                    AND (o.orderStatus = 'paid' AND o.delStatus = 'Done') 
+                    OR (o.orderStatus = 'paid' AND o.delStatus IS null)  
                     GROUP BY o.order_id
                     ORDER BY o.feedback ASC";
 
