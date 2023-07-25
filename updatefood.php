@@ -6,7 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>update food</title>
   <link rel="stylesheet" href="style2.css">
-  <?php include('workerpage.php') ?>
+  <?php include('workerpage.php');
+  // Check if the worker's profession is "delivery men"
+$worker_id = $_SESSION['worker_id'];
+$query = "SELECT * FROM worker WHERE worker_id = '$worker_id' AND (profesison = 'cafe worker' OR profesison = 'manager')";
+$result = mysqli_query($conn, $query);
+if (mysqli_num_rows($result) == 0) {
+    echo "<p style='font-size: 50px; color: #A52A2A; margin-top:200px; margin-left:350px; font-family:Fantasy;'>You are not authorized to access this page.</p>";
+    //header("Location: workerpage.php");
+    exit();
+}
+ ?>
 </head>
 <body>
   <form class="search" method="GET">

@@ -174,7 +174,7 @@ if (mysqli_num_rows($result) == 0) {
 			</p>
 			<p>
 				<label>phoneNumber</label>
-				<input type="text" id="phone" name="phone" maxlength="11" autofocus required>
+				<input type="phone" id="phone" name="phone" maxlength="11" autofocus required>
 			</p>
 			<p>
 				<label>email</label>
